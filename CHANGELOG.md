@@ -1,5 +1,8 @@
 # Change Log
 
+## v0.7.6
+* fix `omb combo set_broadcast` raising `ValueError` (it passed the maker instance as a key); now correctly aliases `broadcast`
+
 ## v0.7.5
 * `omb combo` alias `broadcast` => `set_broadcast`
 

@@ -184,7 +184,7 @@ class ComboMaker:
 
         :param keys: Variable names to broadcast
         """
-        return self.broadcast(self, *keys)
+        return self.broadcast(*keys)
 
     def make_files(self, file: str, template: str, delimiter='@', mode=None, encoding='utf-8',
                    extra_vars_from_file=None, ignore_error=False):
