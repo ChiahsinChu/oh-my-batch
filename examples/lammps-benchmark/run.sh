@@ -39,9 +39,8 @@ omb combo \
     add_files LMP_IN ./config/in.lmp --abs -\
     add_files LMP_DATA ./config/data.lmp --abs -\
     add_var OMP_NUMS  64 32 16  8  4  2  1 -\
-    add_var MPI_NUMS  1  2  4  8 16 32 64 -\
+    compute MPI_NUMS  "64 // OMP_NUMS" -\
     add_var OPENBLAS_NUMS 1 8 16 -\
-    set_broadcast MPI_NUMS -\
     make_files ./out/job-omp-{OMP_NUMS}-mpi-{MPI_NUMS}-blas-{OPENBLAS_NUMS}/run.sh --template ./out/lmp.sh --mode 755 -\
     done
 
